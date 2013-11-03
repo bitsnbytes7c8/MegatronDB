@@ -1,0 +1,16 @@
+Table:airports:
+ID:int:NO:PRI:
+TYPE:varchar(50):YES::
+NAME:varchar(50):YES::
+LATITUDE:int:YES::
+LONGITUDE:int:YES::
+COUNTRY:varchar(50):YES::
+REGION:varchar(50):YES::								
+0end_table0
+
+Table:countries:
+ID:int:NO::
+CODE:varchar(50):NO:PRI:
+NAME:varchar(50):NO::		
+CONTINENT:varchat(50):NO::								 
+0end_table0											

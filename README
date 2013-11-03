@@ -1,0 +1,47 @@
+
+SCHEMA:
+
+The schema of the tables should be of the format mentioned in a file named "schema" and should be of the format as follows:
+
+Table:<tablename1>:
+<fieldname1>:<field_type>:<NULL>:<Key>:
+<fieldname2>:<field_type>:<NULL>:<Key>:
+.
+.
+.
+0end_table0
+
+Table:<tablename2>:
+.
+.
+.
+0end_table0
+
+***********************************************************************************************************************************************************************
+
+The .csv file:
+
+The .csv files should be named <tablename>.csv. The file format should be as given in the files airports.csv and countries.csv. The values should be in the order of columns mentioned in the schema.
+
+**********************************************************************************************************************************************************************
+
+Query format: As mentioned in the assignment file. Queries are case sensitive including the keywords.
+
+1. select * from <table name>;
+2. select <col1>,<col2> from <table name>; There can be more than 1 column in the query.
+3. select distinct(<col1>) from <table name>; Only 1 column in distinct should be provided.
+4. select <*/col1> from <table name> where <condition>; <condition> can be 1. <col1> <op> <value>, 2. <col1> <op> <col2>, 3. <op> can be =, >, <,<= or >=, 4. <condition> would be always valid.
+5. select * from <table1>, <table2> where <col1>=<col2>; <col1> will be from table1 and <col2> from table2
+
+Examples:
+1. select * from countries;
+2. select ID, NAME from countries; (There should be space between the column names. No Space between column name and comma)
+3. select distinct COUNTRY from airports; (No brackets unlike given in the assignment file)
+4. select ID, NAME from countries where ID > 1;
+   select ID, NAME from countries where NAME = "India"; (Strings should be enclosed in quotes)
+	 select ID, NAME from countries where NAME = CONTINENT;
+5. select * from countries, airports where NAME = COUNTRY;
+6. quit;
+
+7. <query> | <filename>; (Redirects output to <filename>)
+***********************************************************************************************************************************************************************
